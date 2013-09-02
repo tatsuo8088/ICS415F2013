@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Forms</title>
+</head>
+<body>
+<table border="1" width="100%">
+<th colspan = "2"><h1>Matt's Awesome Website</h1></th>
+<tr>
+	<td colspan = "2"><a href = "StartPage.html">Home</a> <a href = "Forms.html">Forms</a> <a href = "Frame.html">Frames</a></td>
+</tr>
+<tr>
+	<td height = "800" col width = "30%" valign = "top">
+		<b>Forms Summary</b>
+		<p>HTML forms support several different types of input</p>
+	</td>
+	<td height = "800" col width = "70%" valign = "top">
+		<b>Forms Page</b>
+		<form>
+			The following is a text input: <br>
+			Username: <input type = "text" name = "username"><br>
+			Then a password input: <br>
+			Password: <input type = "password" name = "pwd"><br>
+
+			We can have radio buttons<br>
+			<input type = "radio" name = "type" value = "male">Male<br>
+			<input type = "radio" name = "type" value = "female">Female<br>
+			<input type = "radio" name = "type" value = "cow">cow<br>
+			<input type = "radio" name = "type" value = "chicken">chicken<br>
+
+			Or checkboxes:<br>
+			<input type="checkbox" name="vehicle" value="Bike">bike<br>
+			<input type="checkbox" name="vehicle" value="Car">car<br>
+			<input type="checkbox" name="vehicle" value="Motorcycle">motorcycle<br>
+			<input type="checkbox" name="vehicle" value="Bus">bus <br>	
+
+			<form name="input" action="demo_form.html" method="get">
+			Test Input: <input type = "text" name = "test">
+			<input type="submit" value="Submit">
+		</form>
+	</td>
+</tr>
+<tr>
+	<td colspan = "2" align = "center">Copyright Matt Kanda</td>
+<tr>
+</table>
+</body>
+</html>
