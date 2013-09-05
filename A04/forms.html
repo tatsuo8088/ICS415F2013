@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Matt's Awesome Forms Website</title>
+<style>
+	html, body{
+		height: 100%;
+	}
+	table,td,th{
+		border: 1px solid black;
+	}
+
+	table.header{
+		width: 100%;
+		height: 25%;
+	}	 
+	
+	table.regular{
+		width: 100%;
+	}
+	th{
+		border: Solid #0000FF;
+		width: 100%;
+		height: 25%;
+	}
+	tr{
+		vertical-align: top;
+		width: 100%;
+		height: 50px;
+	}
+	tfoot{
+		text-align: center;
+		width: 100%;
+		height: 50px;
+	}
+</style
+</head>
+<body>
+<table class = "header">
+	<tr>
+	<th colspan = "2" style = "vertical-align: middle;"><h1>Matt's Awesome Forms Website<h1></th>
+	</tr>
+</table>
+
+<table class = "regular">
+<tr>
+	<td colspan = "2" style = "vertical-align: middle"><a href = "main.html">Home</a> <a href = "forms.html">Forms</a></td>
+</tr>
+<tr style = "width: 100%; height: 900px;">
+	<td style = "width: 25%;">
+		<span style = "font-weight: bold; font-size: 20px;">Forms Summary</span>
+		<p>HTML5 forms support several different types of input</p>
+	</td>
+	
+	<td style = "width: 75%; background-image: url('IMG_0302.jpg'); background-repeat: no-repeat; background-size: 1500px;"">
+		<form action="forms.html">
+		Username: <input type="text" name="username">
+		<br>Select your favorite color: <input type="color" name="favcolor">
+		<br>What is the date?: <input type="date" name="today">
+		<br>What is the day and time?: <input type="datetime" name="day_time">
+		<br>E-mail: <input type="email" name="email">
+		<br>What is the month?: <input type="month" name="month">
+		<br>Guess a number between 1 and 100: <input type="number" name="quantity" min="1" max="100">
+		<br><input type="range" name="points" min="1" max="10">
+		<br>Search Google: <input type="search" name="googlesearch">
+		<br>What is your homepage?: <input type="url" name="homepage">
+		<br><input type="submit">
+		</form>
+	</td>
+</tr>
+<tfoot>
+	<td colspan = "2">Copyright Matt Kanda</td>
+</tfoot>
+</table>
+</body>
+</html>

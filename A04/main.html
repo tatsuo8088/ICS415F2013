@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Matt's Awesome Website</title>
+<style>
+	html, body{
+		height: 100%;
+	}
+	
+	table,td,th{
+		border: 1px solid black;
+	}
+	
+	table.regular{
+		width: 100%;
+	}
+	
+	table.header{
+		width: 100%;
+		height: 25%;
+	}
+	
+	th{
+		border: Solid #0000FF;
+		width: 100%;
+		height: 25%;
+	}
+	tr{
+		vertical-align: top;
+		width: 100%;
+		height: 50px;
+	}
+	tfoot{
+		text-align: center;
+		width: 100%;
+		height: 50px;
+	}
+	ul.a {list-style-type: circle;}
+	ol.b {list-style-type: decimal;}
+	
+	dt{
+		font-weight: bold;
+		text-decoration: underline;
+	}
+</style>
+</head>
+<body>
+<table class = "header">
+	<tr>
+	<th style = "vertical-align: middle;" colspan = "2"><h1>Matt's Awesome Website<h1></th>
+	</tr>
+</table>
+
+<table class = "regular">
+<tr>
+	<td colspan = "2" style = "vertical-align: middle"><a href = "main.html">Home</a> <a href = "forms.html">Forms</a></td>
+</tr>
+<tr style = "width: 100%; height: 900px;">
+
+	<!--Left Frame-->
+	<td style = "width: 25%;">
+		<span style = "font-weight: bold; font-size: 20px;">Summary Window</span>
+		<p>HTML supports tables</p>
+		<p>HTML supports three different types of lists; unordered, ordered, and description</p>
+	</td>
+	
+	<!--Right Frame-->
+	<td style = "width: 75%; background-image: url('IMG_0302.jpg'); background-repeat: no-repeat; background-size: 1500px;">
+		<span style = "font-weight: bold; font-size: 20px">Home Page</span>
+		<p>Tables:</p>
+		
+		<!--Start of Borderless Table -->
+		<table style = "border: 0px; width: 50px;">
+			<caption>borderless</caption>
+			<tr style = "height: 10px;">
+				<td style = "border: 0px; text-align: center;">table</td>
+			</tr>
+			<tr style = "height: 10px;">
+				<td style = "border: 0px; text-align: center;">Header</td>
+			</tr>
+			<tr style = "height: 10px;">
+				<td style = "border: 0px; text-align: center;">Cell</td>
+			</tr>
+		</table>
+		<!--End of Borderless Table-->
+		
+		<!--Start of Bordered Table-->
+		<table style = "border: 1px solid black; width: 200px;">
+			<caption>Bordered Table</caption>
+			<tr>
+				<th style = "border: 1px solid black; width: 50%" >Header 1</th>
+				<th style = "border: 1px solid black; width: 50%;" >Header 2</th>
+			</tr>
+			<tr style = "height: 20px;">
+				<td>row 1, cell 1</td>
+				<td>row 1, cell 2</td>
+			</tr>
+			<tr style = "height: 20px;">
+				<td>row 2, cell 1</td>
+				<td>row 2, cell 2</td>
+			</tr>
+			<tfoot>
+				<tr style = "height: 20px;">
+					<td style = "text-align: left;">Footer 1</td>
+					<td style = "text-align: left;">Footer 2</td>
+				</tr>
+			</tfoot>
+		</table>
+		<!--End of Bordered Table-->
+		<p>Lists:</p>
+
+		<ul class="a">
+		  <li>Coffee</li>
+		  <li>Milk</li>
+		</ul>
+
+		<ol class="b">
+		  <li>Coffee</li>
+		  <li>Milk</li>
+		</ol>
+		
+		<dl>
+			<dt>Coffee</dt>
+				<dd>- black hot drink</dd>
+			<dt>Milk</dt>
+				<dd>- while cold drink</dd>
+		</dl>
+		
+		<p>Here's a two column layout with header, navigation bar and footer sections, there is a fairly large header and narrow horizontal naviation bar</p>
+	
+		<p>The main section of the web site has a left-hand</p>
+	</td>
+</tr>
+
+
+<tfoot>
+	<td colspan = "2">Copyright Matt Kanda</td>
+</tfoot>
+</table>
+</body>
+</html>
