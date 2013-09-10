@@ -1,0 +1,49 @@
+/*******************************************************************/
+body {
+	background: #0d1424 url(images/body-bg.jpg) no-repeat center top;
+	color: #666;
+	margin: 35px;
+
+}
+
+/*******************************************************************/
+h1 {
+	font-size: 2em;
+}
+h2{
+	font-size: 100%;
+	font-weight: bold;
+	font-style: italic;
+}
+
+/******************************************************************/
+.navbar-inner {
+  background-color: #b9b9b9; /* fallback color, place your own */
+
+}
+
+.content-body{
+	padding: 20px 35px;
+	margin: 0px 0 30px 30px;
+	width: 670px;
+	float: left;
+}
+
+.sidebar_Left{
+	width: 240px;
+	height: 240px;
+	float: left;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.sidebar_Right{
+	width: 240px;
+	height: 240px;
+	float: right;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
