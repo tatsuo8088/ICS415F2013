@@ -1,0 +1,12 @@
+.addBold{
+	font-weight: bold;
+}
+.addFontSize{
+	font-size: 200%;
+}
+.addFontStyle{
+	font-style: italic;
+}
+.changeFontColor{
+	color: #00ff00;
+}
