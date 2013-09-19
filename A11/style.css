@@ -1,0 +1,11 @@
+.answer{
+	font-size: 100%;
+	display: none;
+}
+
+a{
+	font-size: 110%;
+	font-weight: bold;
+	text-decoration: none;
+	color: #1565ba;
+}
