@@ -1,0 +1,62 @@
+#container{
+	height: 300px;
+	width: 250px;
+	position: relative;
+	top: 30%;
+	margin: auto auto;
+	background: #D0D0D0; 
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	
+}
+
+#title{
+	Position: relative;
+	top: 50px;
+	left: 60px;
+}
+
+#loginbox{
+	position: relative;
+	top: 100px;
+	left: 12px;
+}
+
+#inputLogin{
+	margin-left: 28px;
+}
+
+
+/*Fade in effect for the log in screen*/
+#fade{
+	animation:demo 2s;
+    -moz-animation:demo 2s; /* Firefox */
+    -webkit-animation:demo 2s; /* Safari and Chrome */
+    -o-animation:demo 2s; /* Opera */
+}
+
+@-webkit-keyframes demo {
+   0% {opacity:0;}
+   100% {opacity:1;}
+}
+
+@keyframes demo {
+   0% {opacity:0;}
+   100% {opacity:1;}
+}
+
+@-moz-keyframes demo { /* Firefox */
+   0% {opacity:0;}
+   100% {opacity:1;}
+}
+
+@-webkit-keyframes demo { /* Safari and Chrome */
+   0% {opacity:0;}
+   100% {opacity:1;}
+}
+
+@-o-keyframes demo { /* Opera */
+   0% {opacity:0;}
+   100% {opacity:1;}
+}
