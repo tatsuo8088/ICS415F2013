@@ -1,7 +1,10 @@
 <?php
-	$username = $_POST["login"];
+	require 'connect.php';
+	
+
+	$email = $_POST["email"];
 	$password = $_POST["password"];
 	
-	echo $username;
+	echo $email;
 	echo $password;
 ?>

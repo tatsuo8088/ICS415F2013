@@ -1,5 +1,5 @@
 #container{
-	height: 300px;
+	height: 250px;
 	width: 250px;
 	position: relative;
 	top: 30%;
@@ -14,49 +14,19 @@
 #title{
 	Position: relative;
 	top: 50px;
-	left: 60px;
+	left: 35px;
 }
 
 #loginbox{
 	position: relative;
-	top: 100px;
+	top: 80px;
 	left: 12px;
 }
 
-#inputLogin{
-	margin-left: 28px;
+#inputEmail{
+	margin-left: 22px;
 }
 
-
-/*Fade in effect for the log in screen*/
-#fade{
-	animation:demo 2s;
-    -moz-animation:demo 2s; /* Firefox */
-    -webkit-animation:demo 2s; /* Safari and Chrome */
-    -o-animation:demo 2s; /* Opera */
-}
-
-@-webkit-keyframes demo {
-   0% {opacity:0;}
-   100% {opacity:1;}
-}
-
-@keyframes demo {
-   0% {opacity:0;}
-   100% {opacity:1;}
-}
-
-@-moz-keyframes demo { /* Firefox */
-   0% {opacity:0;}
-   100% {opacity:1;}
-}
-
-@-webkit-keyframes demo { /* Safari and Chrome */
-   0% {opacity:0;}
-   100% {opacity:1;}
-}
-
-@-o-keyframes demo { /* Opera */
-   0% {opacity:0;}
-   100% {opacity:1;}
+.error{
+	background: #FF0000;
 }
