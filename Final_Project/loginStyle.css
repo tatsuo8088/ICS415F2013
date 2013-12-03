@@ -13,18 +13,14 @@
 
 #title{
 	Position: relative;
-	top: 50px;
-	left: 35px;
+	top: 10%;
+	left: 15%;
 }
 
 #loginbox{
 	position: relative;
-	top: 80px;
+	top: 50px;
 	left: 12px;
-}
-
-#inputEmail{
-	margin-left: 22px;
 }
 
 .error{
