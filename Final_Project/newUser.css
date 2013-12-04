@@ -19,6 +19,7 @@
 #newUserForm{
 	position: relative;
 	top: 90px;
+	margin-left: 50px;
 }
 #inputEmail{
 	margin-left: 76px;
