@@ -1,5 +1,6 @@
 <?php
 	require 'connect.php';
+	$userExistance = false;
 	
 	$number_of_users = mysqli_fetch_array($mysqli -> query("SELECT COUNT(username) FROM user_info"));
 	
@@ -14,7 +15,17 @@
 	   $zip = $_POST["zip"];
 	   $country = $_POST["country"];
 	   
-	   	$mysqli -> query("INSERT INTO `user_info`(`username`, 
+	   $query_run = $mysqli -> query("SELECT COUNT(username)  
+									  FROM user_info 
+									  WHERE username = '$email'");
+									  
+	   $query_num_rows = mysqli_fetch_array($query_run);
+	   
+	   if($query_num_rows[0] > 0){
+			$userExistance = true;
+	   }
+	   else{						  
+			$mysqli -> query("INSERT INTO `user_info`(`username`, 
 												  `password`, 
 												  `userid`,
 												  `street_address`,
@@ -24,12 +35,15 @@
 												  `country`) 
 						  VALUES ('$email',
 								  '$password',
-						           $number_of_users[0] + 1,
+								   $number_of_users[0] + 1,
 								  '$street_address',
 								  '$city',
 								  '$state',
 								  '$zip',
 								  '$country')");
+								  
+			header("Location: final_project_login.php");
+		}
 	}
 ?>
 <html>
@@ -58,5 +72,10 @@
 				<script src = "new_user_script.js"></script>
 			</div>
 		</div>
+		<?php
+			if($userExistance == true){
+				echo '<script type="text/javascript"> alert("Sorry! There already an account by that username") </script>';
+			}
+		?>
 	</body>
 </head>

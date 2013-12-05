@@ -41,7 +41,7 @@
 				<form name = "final_project" action = "final_project_login.php" onsubmit = "return validateForm()" method = "POST">
 					<br>E-mail: <input id = "inputEmail" type = "email" name = "email">
 					<br>Password: <input id = "inputPassword" type = "password" name = "password">
-					<br><input type = "submit" value = "Submit"><a href = "newUser.html">New User?</a>
+					<br><input type = "submit" value = "Submit"><a href = "newUser.php">New User?</a>
 				</form>
 				
 				<script src = "script.js"></script>
