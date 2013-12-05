@@ -13,7 +13,20 @@
 										  WHERE username = '$email'")){
 			$query_num_rows = mysqli_fetch_array($query_run);
 			if($query_num_rows[0] > 0){
-				echo "It exists";
+				/*
+				 * After successfully checking that the user is in the database
+				 * a cookie is created and the land page that is loaded by 
+				 * "header" below accepts that
+				 */
+				setcookie('username', $email, time() + 3600);
+				
+				
+				
+				/*
+				 * Use this to load the landing page for the
+				 * user
+				 */
+				//header("Location: phpsqlcomment.php");
 			}
 			else{
 			$exists = false;	
