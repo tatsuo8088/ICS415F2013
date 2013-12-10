@@ -5,8 +5,8 @@
     </head>
 	<body>
 		<?php
-			$con = mysql_connect("localhost","matt","kanda","final_project") or die(mysql_error());
-			mysql_select_db("Caffeine",$con);
+			$con = mysql_connect("localhost","matt","kanda") or die(mysql_error());
+			mysql_select_db("final_project",$con);
 			$userid = $_COOKIE['useridCookie'];
 		?>
 	
@@ -15,16 +15,16 @@
                         <div id = "navbar">
                                 <ul>
                                         <li><a href = "Final_Project.html">Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-                                        <li><a href = "login.html">Login&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                                        <li><a href = "final_project_login.php">Log Out&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
                                         <li><a href = "HowTo.html">How to use this site&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-                                        <li><a href = "#">About</a></li>
+                                        <li><a href = "about.html">About</a></li>
                                 </ul>
                         </div>
 
 						<div id = "main-column">
 						
 							<?php
-								$sql = "SELECT * FROM tracker WHERE id = 12";
+								$sql = "SELECT * FROM tracker WHERE id = $userid";
 								$result = mysql_query($sql,$con);
 							?>
 							<table border="1">
