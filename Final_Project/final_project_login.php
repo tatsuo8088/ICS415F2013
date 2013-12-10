@@ -18,7 +18,12 @@
 				 * a cookie is created and the land page that is loaded by 
 				 * "header" below accepts that
 				 */
-				setcookie('username', $email, time() + 3600);
+				echo "successful login";
+				$userid_fetch = $mysqli -> query("SELECT userid FROM user_info WHERE username = '$email'"); 
+				$row = mysqli_fetch_array($userid_fetch);
+				$useridval = $row['userid'];
+				
+				setcookie('useridCookie', $useridval, time() + 3600);
 				
 				
 				
@@ -26,7 +31,8 @@
 				 * Use this to load the landing page for the
 				 * user
 				 */
-				//header("Location: phpsqlcomment.php");
+				header("Location: caffeineUser.php");
+				
 			}
 			else{
 			$exists = false;	
