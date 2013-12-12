@@ -2,6 +2,7 @@
 	require 'connect.php';
 	
 	$exists = true;
+	$passwordExists = true;
 	
 	
 	if(isset($_POST["email"]) && isset($_POST["password"])){
@@ -18,12 +19,25 @@
 				 * a cookie is created and the land page that is loaded by 
 				 * "header" below accepts that
 				 */
-				echo "successful login";
-				$userid_fetch = $mysqli -> query("SELECT userid FROM user_info WHERE username = '$email'"); 
-				$row = mysqli_fetch_array($userid_fetch);
-				$useridval = $row['userid'];
-				
-				setcookie('useridCookie', $useridval, time() + 3600);
+				 
+				$query_run_pass = $mysqli -> query("SELECT COUNT(password)  
+										  FROM user_info 
+										  WHERE password = '$password'");
+				$query_num_rows_pass = mysqli_fetch_array($query_run_pass);
+				if($query_num_rows_pass[0] > 0){
+					echo "successful login";
+					$userid_fetch = $mysqli -> query("SELECT userid FROM user_info WHERE username = '$email'"); 
+					$row = mysqli_fetch_array($userid_fetch);
+					$useridval = $row['userid'];
+					
+					setcookie('useridCookie', $useridval, time() + 3600);
+					header("Location: track_page.php");
+					$passwordExists = false;
+				}
+				else{
+					$passwordExists = false;
+				}
+
 				
 				
 				
@@ -31,7 +45,7 @@
 				 * Use this to load the landing page for the
 				 * user
 				 */
-				header("Location: track_page.php");
+				
 				
 			}
 			else{
@@ -69,6 +83,9 @@
 		<?php
 			if($exists == false){
 				echo '<script type="text/javascript"> alert("Sorry! Your username does not exist") </script>';
+			}
+			if($passwordExists == false){
+				echo '<script type="text/javascript"> alert("Sorry! Your password is incorrect") </script>';
 			}
 		?>
 	</body>
