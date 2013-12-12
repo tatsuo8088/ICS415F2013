@@ -31,7 +31,7 @@
 				 * Use this to load the landing page for the
 				 * user
 				 */
-				header("Location: caffeineUser.php");
+				header("Location: track_page.php");
 				
 			}
 			else{
@@ -54,7 +54,7 @@
 	<body>
 		<div id = "container">
 			<div id = "title">
-				<h1>Caffine Tracker<h1>
+				<h1>Caffeine Tracker<h1>
 			</div>
 			<div id = "loginbox">
 				<form name = "final_project" action = "final_project_login.php" onsubmit = "return validateForm()" method = "POST">

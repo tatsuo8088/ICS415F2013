@@ -1,8 +1,8 @@
 <?php
-$userid = $_COOKIE['userid'];
+$userid = $_COOKIE['useridCookie'];
 
 $mysqli = new mysqli("localhost","matt","kanda","final_project");
-$URL="http://localhost/Final%20Project/caffeineUser.php";
+$URL="http://localhost/Final_Project%20v2/track_page.php";
 if ($mysqli->connect_error) {
     die('Connect Error (' . $mysqli->connect_errno . ') '
             . $mysqli->connect_error);}
